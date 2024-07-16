@@ -51,7 +51,7 @@ def update_user(user_id: int, username: Optional[str] = None,
         params.append(login_try_count)
     
     if not updates:
-        raise ValueError("At least one field must be provided for update")
+        raise ValueError("Error")
     
     query += ", ".join(updates) + " WHERE id = %s RETURNING id;"
     params.append(user_id)
